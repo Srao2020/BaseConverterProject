@@ -3,7 +3,7 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 
 /**
- * Javadoc me
+ * A program that converts numbers from the range of base-2 to base-16 numbers to a new number, also in the range base-2 through base-16
  * @version 11.30.2022
  * @author Srao2020
  */
@@ -26,11 +26,12 @@ public class BaseConverter {
     }
 
     /**
-     * Javadoc me
-     * @param num
-     * @param toBase
-     * @return
+     * Convert an int num to a String toNum in toBase.
+     * @param num the original number
+     * @param toBase the new base
+     * @return A string of the new base
      */
+
     public String intToStr(int num, int toBase) {
         //value = DIGITS.charAt(num % toBase) + value;
 
@@ -45,7 +46,7 @@ public class BaseConverter {
     }
 
     /**
-     * Javadoc me
+     * Writes to a file and catches invalid input.
      */
     public void inputConvertPrintWrite() {
         Scanner in = null;
@@ -68,12 +69,6 @@ public class BaseConverter {
                     out.println(line[0] + "\t" + line[1] + "\t" + output + "\t" + line[2]);
                     System.out.println(line[0] + "base" + line[1] + " = " + output + " base " + line[2]);
                 }
-
-
-                //System.out.println(line[0]);
-                //System.out.println(line[1]);
-                //System.out.println(line[2]);
-                //System.out.println(line.split("\t"));
             }
             if (out != null)
                 out.close();
@@ -86,8 +81,8 @@ public class BaseConverter {
     }
 
     /**
-     * Javadoc me
-     * @param args
+     * Main method for BaseConverter
+     * @param args command line arguments, if needed
      */
     public static void main(String[] args) {
         BaseConverter bc = new BaseConverter();
@@ -95,12 +90,3 @@ public class BaseConverter {
         bc.inputConvertPrintWrite();
     }
 }
-
-/*
-String toNum = "";
-while base-10 num >0
-
-while b10num > 0:
-    toNum = "" A+3+ 4
-    b10Num /= 13; --> 2
- */
